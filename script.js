@@ -1,3 +1,10 @@
+const hamburgerMenu = document.querySelector(".hamburger-menu");
+const nav = document.querySelector(".nav");
+
+hamburgerMenu.addEventListener("click", () => {
+    nav.classList.toggle("active")
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     // Home section
     document.getElementById('home-name').textContent = 'Raveed Ullah Usmani';

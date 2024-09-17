@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 html, body {
     margin: 0;
     padding: 0;
@@ -11,6 +16,26 @@ body {
 }
 
 /* Navigation */
+.menu{
+    padding: 15px 30px; /* Larger padding */
+    font-size: 18px; /* Larger font size */
+}
+.hamburger-menu {
+    display: none; /* Hidden by default for larger screens */
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 5%;
+    height: 5vh;
+    z-index: 3;
+}
+.nav-container {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
 nav {
     position: fixed;
     top: 0;
@@ -500,4 +525,206 @@ footer a:hover {
 .scroll-to-top i {
     margin: 0;
 }
-  
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .skill-item {
+        width: 150px;
+    }
+
+    .experience-info {
+        width: 100%;
+    }
+
+    .project-item {
+        width: 100%;
+    }
+
+    section {
+        height: 150vh;
+    }
+    #projects{
+        height: 300vh;
+    }
+    #experience{
+        height: 200vh;
+    }
+}
+
+@media (max-width: 480px) {
+    #home h1 {
+        font-size: 2.5rem;
+    }
+
+    #home p {
+        font-size: 1rem;
+    }
+
+    .skill-item i {
+        font-size: 30px;
+    }
+
+    .project-item {
+        padding: 10px;
+    }
+
+    section {
+        height: 150vh; /* Increased vh for very small screens */
+    }
+    #expreience{
+        height: 200vh;
+    }
+    #projects{
+        height: 300vh;
+    }
+}
+/*nev menu for mobile view*/
+/* Mobile menu styles */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.nav-toggle-icon {
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    position: relative;
+}
+
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+    content: '';
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    transition: transform 0.3s ease;
+}
+
+.nav-toggle-icon::before {
+    top: -8px;
+}
+
+.nav-toggle-icon::after {
+    top: 8px;
+}
+
+/* Hide menu on mobile */
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust based on nav height */
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-menu.active {
+    display: flex;
+}
+
+.nav-menu li {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.nav-menu li a {
+    font-size: 1.2rem;
+}
+
+/* Nav toggle icon active state */
+.nav-toggle.active .nav-toggle-icon {
+    background-color: transparent;
+}
+
+.nav-toggle.active .nav-toggle-icon::before {
+    transform: rotate(45deg);
+}
+
+.nav-toggle.active .nav-toggle-icon::after {
+    transform: rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Hidden by default */
+    }
+
+    .nav-toggle {
+        display: block; /* Show toggle button */
+    }
+}
+@media (max-width: 768px) {
+    .nav-container .logo {
+        font-size: 1.2rem;
+        z-index: 2;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .nav--ul__one,
+    .nav--ul__two {
+        flex-direction: column;
+        gap: .6rem;
+    }
+
+    .hamburger-menu {
+        display: block;
+
+        z-index: 1110000;
+    }
+
+    .nav {
+        position: absolute;
+        top: 0;
+        right: -100%;
+        bottom: 0;
+        width: 100%;
+
+        padding-top: 6rem;
+
+        align-items: center;
+        text-align: center;
+        background-color: #333;
+        color: white;
+
+        transition: 0.15s ease-in-out;
+    }
+
+    .nav.active {
+        right: 0;
+    }
+
+}
