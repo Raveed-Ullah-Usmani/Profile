@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <h2>${project.title}</h2>
             <p><strong>${project.type}:</strong> ${project.place}</p>
             <p>${project.description}</p>
-            <a href="${project.link}" target="_blank" class="github-btn" style="width:100px">View Project</a>
+            <a href="${project.link}" target="_blank" class="github-btn" style="width:200px">View Project</a>
         `;
         projectsContent.appendChild(projectItem);
     });
