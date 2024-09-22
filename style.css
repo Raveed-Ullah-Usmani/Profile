@@ -17,11 +17,11 @@ body {
 
 /* Navigation */
 .menu{
-    padding: 15px 30px; /* Larger padding */
-    font-size: 18px; /* Larger font size */
+    padding: 15px 30px;
+    font-size: 18px;
 }
 .hamburger-menu {
-    display: none; /* Hidden by default for larger screens */
+    display: none;
     cursor: pointer;
     margin-left: auto;
     margin-right: 5%;
@@ -525,77 +525,6 @@ footer a:hover {
 .scroll-to-top i {
     margin: 0;
 }
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-image img {
-        width: 200px;
-        height: 200px;
-    }
-
-    .skill-item {
-        width: 150px;
-    }
-
-    .experience-info {
-        width: 100%;
-    }
-
-    .project-item {
-        width: 100%;
-    }
-
-    section {
-        height: 150vh;
-    }
-    #projects{
-        height: 300vh;
-    }
-    #experience{
-        height: 200vh;
-    }
-}
-
-@media (max-width: 480px) {
-    #home h1 {
-        font-size: 2.5rem;
-    }
-
-    #home p {
-        font-size: 1rem;
-    }
-
-    .skill-item i {
-        font-size: 30px;
-    }
-
-    .project-item {
-        padding: 10px;
-    }
-
-    section {
-        height: 150vh; /* Increased vh for very small screens */
-    }
-    #expreience{
-        height: 200vh;
-    }
-    #projects{
-        height: 300vh;
-    }
-}
-/*nev menu for mobile view*/
 /* Mobile menu styles */
 .nav-toggle {
     display: none;
@@ -673,58 +602,69 @@ footer a:hover {
 .nav-toggle.active .nav-toggle-icon::after {
     transform: rotate(-45deg);
 }
-
+/*nev menu for mobile view*/
 @media (max-width: 768px) {
-    .nav-menu {
-        display: none; /* Hidden by default */
+    #home h1 {
+        font-size: 2rem;
+    }
+    h1 {
+        margin-bottom: 50px;
+    }
+    #home p {
+        font-size: 1rem;
     }
 
-    .nav-toggle {
-        display: block; /* Show toggle button */
-    }
-}
-@media (max-width: 768px) {
-    .nav-container .logo {
-        font-size: 1.2rem;
-        z-index: 2;
+    .skill-item i {
+        font-size: 30px;
     }
 
-    .nav {
+    .project-item {
+        padding: 10px;
+    }
+
+    section {
+        height: 150vh; /* Increased vh for very small screens */
+    }
+    ul{
+        justify-content: start;
+    }
+    .about-container {
         flex-direction: column;
-        gap: 2rem;
-    }
-
-    .nav--ul__one,
-    .nav--ul__two {
-        flex-direction: column;
-        gap: .6rem;
-    }
-
-    .hamburger-menu {
-        display: block;
-
-        z-index: 1110000;
-    }
-
-    .nav {
-        position: absolute;
-        top: 0;
-        right: -100%;
-        bottom: 0;
-        width: 100%;
-
-        padding-top: 6rem;
-
-        align-items: center;
         text-align: center;
-        background-color: #333;
-        color: white;
-
-        transition: 0.15s ease-in-out;
     }
 
-    .nav.active {
-        right: 0;
+    .about-image img {
+        width: 200px;
+        height: 200px;
     }
 
+    .skill-item {
+        width: 150px;
+    }
+
+    .experience-info {
+        width: 100%;
+    }
+
+    .project-item {
+        width: 100%;
+    }
+
+    section {
+        height: 150vh;
+    }
+    #projects{
+        height: 250vh;
+    }
+    #experience{
+        height: 150vh;
+    }
+    #skills{
+        height: 150vh;
+    }
+    .nav ul {
+        overflow-x: scroll;
+        white-space: nowrap;
+        justify-content: left;
+    }
 }
