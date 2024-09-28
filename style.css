@@ -72,6 +72,26 @@ nav ul li a:hover {
     text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
+.arrow {
+    position: fixed;
+    top: 0.0%;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    cursor: pointer;
+    display: none;
+    z-index: 2000;
+    opacity: 0.5;
+}
+
+.left-arrow {
+    left: 0px;
+}
+
+.right-arrow {
+    right: 0px;
+}
+
 
 
 /* Section styling */
@@ -682,5 +702,8 @@ footer a:hover {
         overflow-x: scroll;
         white-space: nowrap;
         justify-content: left;
+    }
+    .arrow {
+        display: block;
     }
 }

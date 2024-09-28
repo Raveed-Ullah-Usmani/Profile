@@ -135,9 +135,3 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('contact-linkedin-link').href = data.contact.linkedinLink;
     document.getElementById('contact-email-link').href = data.contact.emailLink;
 });
-const hamburgerMenu = document.querySelector(".hamburger-menu");
-const nav = document.querySelector(".nav");
-
-hamburgerMenu.addEventListener("click", () => {
-    nav.classList.toggle("active");
-});
