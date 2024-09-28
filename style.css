@@ -69,7 +69,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px rgba(0, 153, 255, 0.5);
+    text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 
@@ -209,6 +209,7 @@ section p {
     max-width: 1000px;
     width: 100%;
     gap: 40px; /* Space between image and text */
+    padding-top:10px;
 }
 #about h1{
     color: white;
@@ -238,9 +239,8 @@ section p {
 }
 
 .about-text p {
-    font-size: 1.2rem;
     color: #777;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 #about a {
     font-weight: bold;
@@ -263,6 +263,7 @@ section p {
 }
 .skill-p{
     font-size: 1.5rem;
+    padding-bottom: 50px;
 }
   
 .skills-content {
@@ -364,7 +365,7 @@ section p {
   
 /*Projects*/
 #projects {
-    height: 200vh;
+    height: 150vh;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -434,7 +435,7 @@ section p {
     padding: 20px;
     background-color: #333;
     color: #f9f9f9;
-    height: 95vh;
+    height: 93vh;
 }
   
 #contact h1 {
@@ -637,9 +638,18 @@ footer a:hover {
         width: 200px;
         height: 200px;
     }
+    #about h2{
+        padding-bottom: 10px;
+    }
+    #about p{
+        font-size: 1.2rem;
+    }
 
     .skill-item {
         width: 150px;
+    }
+    .skill-p{
+        font-size: 1.2rem;
     }
 
     .experience-info {
@@ -653,14 +663,20 @@ footer a:hover {
     section {
         height: 150vh;
     }
+    #about{
+        height: 100vh;
+    }
+    .about-image{
+        padding: 10px 0px;
+    }
     #projects{
-        height: 250vh;
+        height: 200vh;
     }
     #experience{
-        height: 150vh;
+        height: 130vh;
     }
     #skills{
-        height: 150vh;
+        height: 100vh;
     }
     .nav ul {
         overflow-x: scroll;
